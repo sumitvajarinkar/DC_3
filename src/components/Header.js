@@ -9,12 +9,12 @@ export default function Header() {
     <StyledHeader>
       <Container>
         <Nav>
-          <Logo src="./images/logo.svg" alt="" />
+          <Logo src="./images/logo.png" alt="" />
           <Button>Try It Free</Button>
         </Nav>
         <Flex>
           <div>
-            <h1>Hello folks, welcome in Huddle! </h1>
+            <h1>Hello folks, welcome in <br/> Q-Papers ! </h1>
             <p>
             In this website you'll get all previous year question papers of our college according to branches, years, semesters.
             </p>

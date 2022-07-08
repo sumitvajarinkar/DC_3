@@ -7,31 +7,28 @@ export default function Footer() {
   return (
     <StyledFooter>
       <Container>
-        <img src="./images/logo_white.svg" alt="" />
+        <img src="./images/logo.png" alt="" />
         <Flex>
           <ul>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Website soley used for education purpose. Anyone can use it for educational purpose only.
             </li>
-            <li>+1-543-123-4567</li>
-            <li>example@huddle.com</li>
+            <li>+91-7823958515,<br/> +91-7823958515</li>
+            <li>1910033@ritindia.edu, 1910033@ritindia.edu</li>
           </ul>
 
           <ul>
             <li>About Us</li>
             <li>What We Do</li>
-            <li>FAQ</li>
           </ul>
 
           <ul>
-            <li>Career</li>
-            <li>Blog</li>
+            <li>FAQ</li>
             <li>Contact Us</li>
           </ul>
           <SocialIcons/>
         </Flex>
-        <p>&copy; 2021 Huddle. All rights reserved</p>
+        <p>&copy; 2022 Q-Papers. All rights reserved</p>
       </Container>
     </StyledFooter>
   );
