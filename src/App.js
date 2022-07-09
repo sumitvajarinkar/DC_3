@@ -1,7 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/Global";
-
+import {BrowserRouter as Router,Route, Routes } from 'react-router-dom'
+import Home from "./pages/Home";
 const theme = {
   colors: {
     header: "#ebfbff",
@@ -13,12 +14,16 @@ const theme = {
 
 function App() {
   return (
+    <Router>
     <ThemeProvider theme={theme}>
       <>
       <GlobalStyles/>
-        
+      <Routes>
+          <Route path='/' element={<Home/>}/>
+      </Routes>
       </>
     </ThemeProvider>
+    </Router>
   );
 }
 
