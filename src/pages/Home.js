@@ -1,17 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
-import Sidbar from '../components/sidebar/index';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Card from '../components/Card';
+import { Container } from '../components/styles/Container.styled';
+import Content from '../Content';
 const Home = () => {
- const HomeStyles = styled.div`
- display: flex;
- align-items: center;
- justify-content: space-between;
- `;
+ 
 
   return (
-    <HomeStyles>
-      <Sidbar/>
-    </HomeStyles>
+    <>
+    <Header />
+        <Container>
+        {Content.map((item,index)=>(
+          <Card key={index} item={item}/>
+        ))}
+        </Container>
+      <Footer/>
+      </>
   )
 }
 

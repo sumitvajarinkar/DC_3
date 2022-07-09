@@ -1,18 +1,25 @@
-import React from 'react'
-import {BrowserRouter as Router,Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-const App = () => {
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./components/styles/Global";
+
+const theme = {
+  colors: {
+    header: "#ebfbff",
+    body: "#fff",
+    footer: "#003333",
+  },
+  mobile:'768px',
+};
+
+function App() {
   return (
-      <Router>
-            <React.Fragment>
-                <main>
-              <Routes>
-                <Route path='/' element={<Home/>}/>
-              </Routes>
-              </main>
-          </React.Fragment>
-        </Router>
-  )
+    <ThemeProvider theme={theme}>
+      <>
+      <GlobalStyles/>
+        
+      </>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
