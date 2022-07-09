@@ -10,7 +10,7 @@ export default function Header() {
       <Container>
         <Nav>
           <Logo src="./images/logo.png" alt="" />
-          <Button>Try It Free</Button>
+          <Button>Contribute +</Button>
         </Nav>
         <Flex>
           <div>
@@ -18,8 +18,8 @@ export default function Header() {
             <p>
             In this website you'll get all previous year question papers of our college according to branches, years, semesters.
             </p>
-            <Button bg='#ff0099' color='#fff'>
-            Get started
+            <Button>
+            Course categories
             </Button>
           </div>
           <Image src='./images/illustration-mockups.svg' alt=''/>
