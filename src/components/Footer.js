@@ -13,8 +13,8 @@ export default function Footer() {
             <li>
             A website solely used for education purposes. Anyone can use it for educational purposes only.
             </li>
-            <li>+91-7823958515,<br/> +91-7823958515</li>
-            <li>1910033@ritindia.edu, 1910033@ritindia.edu</li>
+            <li>+91-9175732873,<br/> +91-7823958515</li>
+            <li>1909040@ritindia.edu,<br/>1910033@ritindia.edu</li>
           </ul>
 
           <ul>
