@@ -6,7 +6,6 @@ import { Container } from '../components/styles/Container.styled';
 import Content from '../Content';
 const Home = () => {
  
-
   return (
     <>
     <Header />
