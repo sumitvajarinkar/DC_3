@@ -1,10 +1,9 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-// import GlobalStyles from "./components/styles/Global";
+import GlobalStyles from "./components/styles/GlobalStyles";
 import {BrowserRouter as Router,Route, Routes } from 'react-router-dom'
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import "./global.css"
 
 const theme = {
   colors: {
@@ -21,7 +20,7 @@ function App() {
       <Navbar/>
     <ThemeProvider theme={theme}>
       <>
-      {/* <GlobalStyles/> */}
+      <GlobalStyles/>
       <Routes>
           <Route path='/' element={<Home/>}/>
       </Routes>

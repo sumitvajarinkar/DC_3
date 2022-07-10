@@ -7,6 +7,8 @@ justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
 background: white;
+position: sticky;
+top: 0;
 `;
 
 export const Hamburger = styled.div`
@@ -17,7 +19,7 @@ cursor: pointer;
 span{
   height: 2px;
   width: 25px;
-  background: #7b7fda;
+  background: #ff0099;
   margin-bottom: 4px;
   border-radius: 5px;
 }
@@ -34,10 +36,11 @@ text-align: center;
 text-decoration: none;
 color: #67bc98;
 transition: all 0.3s ease-in;
-font-size: 0.9rem;
+font-size: 1.2rem;
+font-weight: 300;
 
 &:hover{
-  color: #7b7fda;
+  color: #ff0099;
 }
 
 `;
@@ -51,6 +54,7 @@ position: relative;
 @media (max-width:768px){
   overflow: hidden;
   flex-direction: column;
+  font-size: 1.2rem;
   width: 100%;
   max-height:${({isOpen})=>(isOpen ? "300px":"0")};
 }
@@ -58,13 +62,14 @@ position: relative;
 
 export const Logo=styled.a`
 padding:1rem 0;
-color:#7b7fda;
+color:#ff0099;
 text-decoration: none;
-font-weight: 800;
-font-size: 1.7rem;
+font-weight: 600;
+font-size: 2rem;
+font-family: 'Segoe UI,sans-serif';
 
 span{
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 `;

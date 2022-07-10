@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <Nav>
       <Logo href="">
-        Q-<span>Papers</span>
+        Q-P<span>apers</span>
       </Logo>
       <Hamburger onClick={()=>setIsOpen(!isOpen)}>
         <span/>
@@ -15,10 +15,10 @@ function Navbar() {
         <span/>
       </Hamburger>
       <Menu isOpen={isOpen}>
-      <MenuLink href="">Our Work</MenuLink>
+      <MenuLink href="">Courses</MenuLink>
       <MenuLink href="">About</MenuLink>
-      <MenuLink href="">Careers</MenuLink>
       <MenuLink href="">Contact</MenuLink>
+      <MenuLink href="">Collaborate</MenuLink>
       </Menu>
     </Nav>
   );
