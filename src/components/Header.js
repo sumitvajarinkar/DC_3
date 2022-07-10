@@ -9,7 +9,7 @@ export default function Header() {
     <StyledHeader>
       <Container>
         <Nav>
-          <Logo src="./images/logo.png" alt="" />
+          <Logo src="./images/logoheader.svg" alt="" />
           <Button>Contribute +</Button>
         </Nav>
         <Flex>

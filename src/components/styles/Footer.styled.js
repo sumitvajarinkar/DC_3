@@ -13,6 +13,15 @@ export const StyledFooter = styled.footer`
   p {
     text-align: right;
   }
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    color:yellow; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
   @media (max-width: ${({ theme }) => theme.mobile}) {
     text-align: center;
     ul {
