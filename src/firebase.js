@@ -19,7 +19,7 @@ const firebaseApp = initializeApp(
  export const auth = getAuth(firebaseApp)
 export const storage = getStorage(firebaseApp)
  export const db={
-    
+    engineering:"Engineering",
     formatedDoc:doc=>{
       return{id:doc.id,...doc.data()}
     },

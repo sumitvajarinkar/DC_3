@@ -3,7 +3,7 @@ import { Container } from "./styles/Container.styled";
 import { Logo, Nav,Image, StyledHeader } from "./styles/Header.styled";
 import { Button } from "./styles/Button.styled";
 import { Flex } from "./styles/Flex.styled";
-
+import {Link} from 'react-router-dom'
 export default function Header() {
   return (
     <StyledHeader>
@@ -18,9 +18,9 @@ export default function Header() {
             <p>
             In this website you'll get all previous year question papers of our college according to branches, years, semesters.
             </p>
-            <Button>
+            <Link to="/catlog"><Button>
             Course categories
-            </Button>
+            </Button></Link>
           </div>
           <Image src='./images/illustration-mockups.svg' alt=''/>
         </Flex>
