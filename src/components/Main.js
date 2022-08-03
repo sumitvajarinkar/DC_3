@@ -13,8 +13,10 @@ const Main = () => {
         </div>
         <BreadCrum/>
         <CardContainer>
-      <Link to="/catlog/engineering"><MainCompCard img={engineericon} title={"Degree Engineering"} des="Total 8 courses"/></Link>
-      <MainCompCard img={engineericon} title={"Degree Engineering"} des="Total 8 courses"/>
+      <Link to="/catlog/Engineering"><MainCompCard img={engineericon} title={"Degree Engineering"} des="Total 8 courses"/></Link>
+      <Link to="/catlog/MBA"><MainCompCard  img={engineericon} title={"MBA"} des="Total 8 courses"/></Link>
+      <Link to="/catlog/BBA"><MainCompCard  img={engineericon} title={"BBA"} des="Total 8 courses"/></Link>
+      <Link to="/catlog/Diploma" ><MainCompCard  img={engineericon} title={"Diploma"} des="Total 8 courses"/></Link>
       </CardContainer>
     </MainComponent>
     

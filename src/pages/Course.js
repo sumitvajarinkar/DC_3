@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 import {getDocs,collection} from 'firebase/firestore'
 import {firestore,db} from '../firebase'
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
 const Course = () => {
     const [data,setData]=useState([])
     const CatlogStyles=styled.div`
@@ -20,9 +20,10 @@ const Course = () => {
     align-items: center;
     justify-content: space-evenly;
     `
+    const {id}=useParams()
     useEffect(()=>{
       const getAllDocs=async()=>{
-        const querySnapshot= await getDocs(collection(firestore,"Engineering"))
+        const querySnapshot= await getDocs(collection(firestore,id))
         const tempDoc=[]
         querySnapshot.forEach((doc)=>{
           const id =db.formatedDoc(doc).id
@@ -38,14 +39,17 @@ const Course = () => {
         <Sidebar/>
           <MainComponent>
           <div style={{width:'100%'}}>
-            <h2>Engineering</h2>
+            <h2>{id}</h2>
            </div>
            <BreadCrum/>
            <CardContainer>
-            {
+            { data.length>0||id==="Engineering"?(
                 data.map((branch)=>(
                    <Link to={`/course/${branch}`}> <MainCompCard key={branch} img={folder} title={branch} des={"Total 6 files"}/></Link>
                 ))
+            ):(
+              <h3>Sorry!, we are working on {id} as well.</h3>
+            )
             }
            </CardContainer>
           </MainComponent>

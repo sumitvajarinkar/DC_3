@@ -37,7 +37,6 @@ const FileComponent = () => {
     },[filterData])
 
 
-    console.log(data)
 
   return (
     <CardContainer>

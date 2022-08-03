@@ -2,11 +2,14 @@ import React ,{useState}from 'react'
 import { FilterContainer, Select } from './styles/Filter.styled'
 import { useFilterUpdate } from '../FilterContext'
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 const Filter = () => {
   const getValues =useFilterUpdate()
   const [year,setYear]=useState()
   const [exam,setExam]=useState()
   const [sem,setSem]=useState()
+  const location= useLocation()
+  
   useEffect(()=>{
     getValues({year,exam,sem})
   },[year,sem,exam])

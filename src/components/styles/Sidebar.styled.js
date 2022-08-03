@@ -7,12 +7,20 @@ z-index: 10;
 color: #fff;
 display: flex;
 flex-direction: column;
-
+transition: all 0.3s ease-in-out;
 align-items: flex-start;
 justify-content: space-between;
 padding: 5px 10px;
 div{
     width: 100%;
+}
+
+@media(max-width:${({ theme }) => theme.mobile}){
+    position:fixed;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    left:${props=>props?.showMenu?"0px":"-100%"} ;
+    top: 0;
 }
 `
 export const Icon=styled.div`
@@ -28,5 +36,19 @@ background: ${({active})=>active?'#0128f8':'none'};
 p{
     margin-left: 10px;
     line-height: 1;
+}
+
+`
+export const CloseIcon=styled.i`
+display: none;
+position: absolute;
+top:30px;
+right: 30px;
+@media(max-width:${({ theme }) => theme.mobile}){
+    display: block;
+    color: #fff;
+    svg{
+        font-size: 17px;
+    }
 }
 `

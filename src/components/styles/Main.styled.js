@@ -10,6 +10,9 @@ align-items: flex-start;
 flex-direction: column;
 justify-content: flex-start;
 padding: 20px;
+@media(max-width:${({ theme }) => theme.mobile}){
+   width: 100%;
+}
 
 h2{
     width: 100%;
@@ -24,6 +27,11 @@ justify-content: flex-start;
 width: 100%;
 flex-wrap: wrap;
 overflow-y:auto;
+
+@media(max-width:${({ theme }) => theme.mobile}){
+    align-items: center;
+justify-content: center;
+}
 `
 export const Card = styled.div`
 width: 250px;

@@ -1,25 +1,29 @@
 import React from 'react'
-import {SidebarComponent,Icon} from './styles/Sidebar.styled'
+import {SidebarComponent,Icon,CloseIcon} from './styles/Sidebar.styled'
 import{MdOutlineDashboardCustomize,MdLogout} from 'react-icons/md'
 import {AiFillHome,AiFillFolderAdd} from 'react-icons/ai'
 import {BsFillInfoSquareFill} from 'react-icons/bs'
-const Sidebar = () => {
+import {CgCloseR} from 'react-icons/cg'
+import { Link } from 'react-router-dom'
+const Sidebar = ({showMenu,setShowMenu}) => {
     
   return (
-    <SidebarComponent>
+    <SidebarComponent showMenu={showMenu}>
       
-        
       
         <div>
+        <CloseIcon onClick={()=>setShowMenu(false)}>
+          <CgCloseR/>
+          </CloseIcon>
         <h4>QPAPERS</h4>
-         <Icon active={true}>
+         <Link to="/catlog"><Icon active={true}>
           <MdOutlineDashboardCustomize/>
           <p>Dashborad</p>
-         </Icon>
-         <Icon>
+         </Icon></Link>
+         <Link to="/"><Icon>
           <AiFillHome/>
           <p>Home</p>
-         </Icon>
+         </Icon></Link>
          <Icon>
           <BsFillInfoSquareFill/>
           <p>About</p>

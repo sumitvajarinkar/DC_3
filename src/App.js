@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css'
 import { Provider } from "./FilterContext";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/GlobalStyles";

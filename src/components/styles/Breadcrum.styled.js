@@ -18,4 +18,7 @@ p{
     line-height: normal;
     margin: 0;
 }
+a{
+    color: white;
+}
 `
