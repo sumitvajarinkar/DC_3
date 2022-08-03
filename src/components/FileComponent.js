@@ -18,6 +18,7 @@ const FileComponent = () => {
      .then((doc)=>{
          setData(db.formatedDoc(doc).papers)
      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
    
     useEffect(()=>{
@@ -34,6 +35,7 @@ const FileComponent = () => {
             const result = data.filter(elem=>elem["year"]===filterData.year&&elem["exam"]===filterData.exam&&elem["sem"]===filterData.sem)
             setData(result)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[filterData])
 
 
