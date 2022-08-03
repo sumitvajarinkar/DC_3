@@ -19,7 +19,7 @@ cursor: pointer;
 span{
   height: 2px;
   width: 25px;
-  background: #ff0099;
+  background: #017bff;
   margin-bottom: 4px;
   border-radius: 5px;
 }
@@ -34,13 +34,13 @@ padding: 1rem 2rem;
 cursor: pointer;
 text-align: center;
 text-decoration: none;
-color: #67bc98;
+color: #017bff;
 transition: all 0.3s ease-in;
 font-size: 1.2rem;
 font-weight: 300;
 
 &:hover{
-  color: #ff0099;
+  color: #0128f8;
 }
 
 `;
@@ -62,7 +62,7 @@ position: relative;
 
 export const Logo=styled.a`
 padding:1rem 0;
-color:#ff0099;
+color:#017bff;
 text-decoration: none;
 font-weight: 600;
 font-size: 2rem;
