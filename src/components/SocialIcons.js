@@ -5,17 +5,17 @@ export default function SocialIcons() {
   return (
     <StyledSocialIcons>
       <li>
-        <a href="https://github.com/sumitvajarinkar/QPWebsite">
+        <a href="https://github.com/sumitvajarinkar/QPWebsite" target="to_blank">
           <FaGithub />
         </a>
       </li>
       <li>
-        <a href="https://linkedin.com">
+        <a href="https://linkedin.com" target="to_blank">
           <FaLinkedin />
         </a>
       </li>
       <li>
-        <a href="https://instagram.com">
+        <a href="https://instagram.com" target="to_blank">
           <FaInstagram />
         </a>
       </li>

@@ -10,14 +10,14 @@ export const Nav = styled.nav`
   justify-content: space-between;
   margin-bottom: 20px;
 
-  @media(max-width:${({theme})=>theme.mobile}){
-  flex-direction: column;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
   }
 `;
 
 export const Logo = styled.img`
-@media(max-width:${({theme})=>theme.mobile}){
-  margin-bottom: 20px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-bottom: 20px;
   }
 `;
 
@@ -25,7 +25,7 @@ export const Image = styled.img`
   width: 375px;
   margin-left: 40px;
 
-  @media(max-width:${({theme})=>theme.mobile}){
-  margin:40px 0 30px ;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin: 40px 0 30px;
   }
 `;

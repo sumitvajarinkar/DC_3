@@ -1,9 +1,9 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 import { Provider } from "./FilterContext";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styles/GlobalStyles";
-import {BrowserRouter as Router,Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Course from "./pages/Course";
 import Catlog from "./pages/Catlog";
@@ -15,26 +15,25 @@ const theme = {
     body: "#fff",
     footer: "#003333",
   },
-  mobile:'768px',
+  mobile: "768px",
 };
 
 function App() {
   return (
     <Provider>
-    <Router>
-      {/* <Navbar/> */}
-    <ThemeProvider theme={theme}>
-      <>
-      <GlobalStyles/>
-      <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path="/catlog" element={<Catlog/>}/>
-          <Route path="/catlog/:id" element={<Course/>}/>
-          <Route path="/course/:id" element={<Papers/>}/>
-      </Routes>
-      </>
-    </ThemeProvider>
-    </Router>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <>
+            <GlobalStyles />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catlog" element={<Catlog />} />
+              <Route path="/catlog/:id" element={<Course />} />
+              <Route path="/course/:id" element={<Papers />} />
+            </Routes>
+          </>
+        </ThemeProvider>
+      </Router>
     </Provider>
   );
 }

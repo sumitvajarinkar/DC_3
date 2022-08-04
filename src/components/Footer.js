@@ -39,10 +39,19 @@ export default function Footer() {
         </Flex>
         <p>
           Made by{" "}
-          <a href="https://www.linkedin.com/in/jaydeep-shelake-a348771b2/" target="to_blank">
+          <a
+            href="https://www.linkedin.com/in/jaydeep-shelake-a348771b2/"
+            target="to_blank"
+          >
             Jaydeep
           </a>{" "}
-          and <a href="https://www.linkedin.com/in/sumitvajarinkar/" target="to_blank">Sumit</a>
+          and{" "}
+          <a
+            href="https://www.linkedin.com/in/sumitvajarinkar/"
+            target="to_blank"
+          >
+            Sumit
+          </a>
         </p>
         <p>&copy; 2022 Q-Papers. All rights reserved</p>
       </Container>
