@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 import pdf from '../assets/images/pdf.png'
 import { useFilter } from '../FilterContext'
 const FileComponent = () => {
+    const [allData,setAllData]=useState([])
     const [data,setData]=useState([])
     
     const filterData=useFilter()
@@ -16,28 +17,29 @@ const FileComponent = () => {
      const docRef = doc(firestore,db.engineering,id)
       getDoc(docRef)
      .then((doc)=>{
+         setAllData(db.formatedDoc(doc).papers)
          setData(db.formatedDoc(doc).papers)
      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
+    
    
     useEffect(()=>{
-        
-        if(filterData.exam===undefined&&filterData.sem===undefined){
-            const result = data.filter(elem=>elem["year"]===filterData.year)
-            setData(result)
-        }
-        if(filterData.exam!==undefined){
-            const result = data.filter(elem=>elem["year"]===filterData.year&&elem["exam"]===filterData.exam)
-            setData(result)
-        }
-        if(filterData.exam!==undefined&&filterData.sem!==undefined){
-            const result = data.filter(elem=>elem["year"]===filterData.year&&elem["exam"]===filterData.exam&&elem["sem"]===filterData.sem)
-            setData(result)
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    let newObj={};
+    if(filterData.year)newObj.year=filterData.year
+    if(filterData.exam)newObj.exam=filterData.exam
+    if(filterData.sem)newObj.sem=filterData.sem
+
+    const filteredData = allData.filter(i =>
+        Object.entries(newObj).every(([k, v]) => i[k] === v)
+      )
+      setData(filteredData)
+
     },[filterData])
 
+
+
+console.log(data)
 
 
   return (
